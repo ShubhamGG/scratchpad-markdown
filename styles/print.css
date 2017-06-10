@@ -1,0 +1,21 @@
+.background-image, .container {
+    display: none;
+}
+
+.print-div {
+    display: block;
+}
+
+code {
+    background: #e0e0e0;
+    padding: 2px 5px;
+}
+
+pre {
+    background: #e0e0e0;
+    padding: 0.5em 1em;
+}
+
+pre code {
+    padding: 0;
+}

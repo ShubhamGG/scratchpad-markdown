@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="simplemde/simplemde.min.css">
+    <script src="simplemde/simplemde.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Fira+Mono" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/png" href="images/notepad.png">
+    <title>Scratchpad</title>
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container container-top navbar-div">
+        <ul class="navbar">
+            <li class="navbar-item option-tab extra-button" title="Archived Tabs" id="op_Unarchive">
+                <i class="img-lg-icon material-icons">unarchive</i>
+                <ul class="option-tab-content"></ul>
+            </li><li class="navbar-item new-tab" id="op_New" title="New Tab"><i class="img-icon material-icons">add</i></li>
+        </ul>
+    </div>
+    <div class="container container-bottom main-div">
+        <div class="options-div">
+            <div class="option-button" alt="Preview" title="Preview" id="op_Preview">
+                <i class="img-lg-icon material-icons">visibility</i>
+            </div>
+            <div class="option-button extra-button">
+                <i class="img-lg-icon material-icons">settings</i>
+                <div class="option-content">
+                    <div class="option" id="op_Print">
+                        <i class="img-lg-icon material-icons">print</i><span>Print</span>
+                    </div>
+                    <div class="option" id="op_CopyHTML">
+                        <i class="img-lg-icon material-icons">code</i><span>Copy HTML</span>
+                    </div>
+                    <div class="option" id="op_Rename">
+                        <i class="img-lg-icon material-icons">mode_edit</i><span>Rename</span>
+                    </div>
+                    <div class="option" id="op_Archive">
+                        <i class="img-lg-icon material-icons">archive</i><span>Archive</span>
+                    </div>
+                    <div class="option" id="op_Delete">
+                        <i class="img-lg-icon material-icons">delete</i><span>Delete</span>
+                    </div>
+                    <div class="option" id="op_Help">
+                        <i class="img-lg-icon material-icons">help</i><span>Help</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <textarea id="content"></textarea>
+    </div>
+    <div class="print-div"></div>
+    <script src="scripts/tabs.js"></script>
+</body>
+</html>

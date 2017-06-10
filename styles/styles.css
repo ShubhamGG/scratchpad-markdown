@@ -1,0 +1,246 @@
+/***** Inclusive Styles *****/
+html,
+body {
+    font-family: 'Fira Mono', 'Trebuchet MS', 'Consolas', sans-serif;
+    height: 100%;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.print-div {
+    display: none;
+}
+
+/***** Background Image *****/
+
+.background-image {
+    background: url(../images/tile-abstract-pattern-vector.png);
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+/***** Container *****/
+
+.container {
+    margin-left: 50px;
+    margin-right: auto;
+    max-width: 992px;
+    position: relative;
+    width: auto;
+}
+
+.container-top {
+    background: #2B1519;
+    box-shadow: rgba(0, 0, 0, 0.14) 0 2px 0 0,
+                rgba(0, 0, 0, 0.12) 0 1px 0 0,
+                rgba(0, 0, 0, 0.2) 0 3px 0 -2px;
+    margin-top: 50px;
+}
+
+.container-bottom {
+    border-top: 0;
+    box-shadow: rgba(0, 0, 0, 0.14) 0 2px 2px 0,
+                rgba(0, 0, 0, 0.12) 0 1px 5px 0,
+                rgba(0, 0, 0, 0.2) 0 3px 1px -2px;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .container-top {margin-top: 16px;}
+}
+
+/***** Tabs *****/
+
+.navbar {
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 10px 0 10px;
+}
+.navbar-item {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 10px 20px 10px 20px;
+    color: #000;
+    background: #aaa;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all ease-in-out 0.15s;
+}
+.navbar-item:hover {
+    background: #ddd;
+    background: rgba(255, 255, 255, 0.8);
+}
+.active-tab,
+.active-tab:hover,
+.option-tab:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+}
+.tabname {
+    font-family: 'Merriweather';
+}
+.img-icon {
+    font-size: 1em;
+    width: auto;
+    vertical-align: middle;
+}
+.img-lg-icon {
+    font-size: 1.5em;
+    width: auto;
+    vertical-align: middle;
+}
+
+/***** Tab Options *****/
+
+.options-div {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+}
+
+.option-button {
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 0.15s;
+}
+
+.option-button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.options-div .extra-button>.material-icons {
+    transition: all ease-in-out 0.15s;
+}
+
+.options-div .extra-button:hover>.material-icons {
+    transform: rotate(60deg);
+}
+
+.option-content,
+.option-tab-content {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    margin: 2px 5px;
+    padding: 2px;
+    padding-top: 8px;
+    background: #ddd;
+}
+
+.option-tab-content {
+    margin: 8px 0;
+    right: auto;
+    left: 10px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.extra-button:hover .option-content,
+.extra-button:hover .option-tab-content {
+    display: block;
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.15s;
+    -moz-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+}
+
+.option {
+    background: #fff;
+    background: rgba(255, 255, 255, 1);
+    display: block;
+    float: right;
+    margin: 0;
+    cursor: pointer;
+    min-width: 10em;
+    clear: both;
+    width: 100%;
+}
+
+.option.disabled {
+    cursor: default;
+}
+
+.option:hover,
+.option.disabled {
+    background: #ddd;
+    background: rgba(0, 0, 0, 0);
+}
+
+.option .material-icons {
+    padding: 6px 10px;
+}
+
+.option span {
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+
+/***** Tab Content *****/
+
+.main-div {
+    background: #fff;
+    display: block;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.main-div>:not(.options-div) {
+    border-color: #fff;
+}
+
+/***** CodeMirror Font Customizations *****/
+
+.cm-header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+}
+.cm-comment,
+code {
+    font-family: 'Fira Mono', monospace;
+}
+
+.editor-preview {
+    background: #fff;
+}
