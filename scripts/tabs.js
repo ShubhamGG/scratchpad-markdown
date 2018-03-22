@@ -346,4 +346,13 @@ $(document).ready(function(e) {
             return false;
         }
     });
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+        .then(function(scope) {
+            console.log('serviceWorker registered in scope ' + scope.scope);
+        }).catch(function(err) {
+            console.log("serviceWorker registration failed: "+err);
+        });
+    }
 });
